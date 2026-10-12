@@ -1,0 +1,29 @@
+AMAZING HEALTH CARE SERVICES LLC — FRESH GITHUB UPLOAD
+
+This is a CLEAN, COMPLETE website package.
+
+For a brand-new GitHub repository:
+1. Create a NEW repository.
+2. Click "uploading an existing file".
+3. Unzip this package on your Mac.
+4. Open the unzipped folder.
+5. Select ALL files inside it, including the entire "assets" folder.
+6. Upload them directly to the MAIN/ROOT of the repository.
+7. Click "Commit changes".
+8. Connect that new repository to a NEW Vercel project.
+
+IMPORTANT:
+- Do NOT upload the ZIP itself to GitHub.
+- Do NOT put all of these files inside another folder in GitHub.
+- Keep the "assets" folder exactly as it is.
+- index.html must be visible in the main/root of the repository.
+
+CURRENT BUSINESS INFO:
+Amazing Health Care Services LLC
+703-870-9966
+Amazinghealthcare09@gmail.com
+17321 Jefferson Davis Hwy
+Dumfries, VA 22026
+
+This version is written as a MEDICAL HOME HEALTH + COMMUNITY-BASED CARE website.
+It includes the uploaded company video and new logo.

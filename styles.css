@@ -1,0 +1,250 @@
+
+:root{
+  --gold:#c69022;
+  --gold2:#e0b24e;
+  --gold-dark:#8b620d;
+  --black:#171512;
+  --charcoal:#2a2722;
+  --ink:#302c27;
+  --muted:#716a61;
+  --warm:#f7f3eb;
+  --cream:#fffaf1;
+  --white:#fff;
+  --line:#e5dccb;
+  --shadow:0 20px 55px rgba(35,27,15,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.58}
+img,video{max-width:100%}
+a{color:inherit}
+.wrap{width:min(1380px,94%);margin:auto}
+
+/* Header */
+.topbar{background:var(--black);color:#fff;font-size:12px;letter-spacing:.15px}
+.topbar-inner{display:flex;align-items:center;justify-content:center;gap:25px;min-height:35px;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none}
+.site-header{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.98);backdrop-filter:blur(12px);border-bottom:1px solid #ece5da}
+.header-main{display:grid;grid-template-columns:360px 1fr auto;gap:20px;align-items:center;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:70px;height:70px;border-radius:50%;object-fit:contain}
+.brand-copy strong{display:block;font-family:Georgia,serif;color:var(--black);font-size:22px;line-height:1.05}
+.brand-copy .brand-second{font-size:17px;color:var(--gold-dark)}
+.brand-copy span{display:block;font-size:9px;letter-spacing:2px;color:#8b7b5c;margin-top:4px}
+.main-nav{display:flex;justify-content:center;align-items:center;gap:15px}
+.main-nav>a,.nav-drop>button{border:0;background:none;text-decoration:none;font:800 13px Arial;color:#2a2722;padding:15px 4px;cursor:pointer}
+.main-nav>a:hover,.nav-drop>button:hover{color:var(--gold-dark)}
+.nav-drop{position:relative}
+.drop-panel{display:none;position:absolute;top:48px;left:0;width:310px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);z-index:1200}
+.drop-panel.mega{width:390px;max-height:70vh;overflow:auto}
+.drop-panel a{display:block;text-decoration:none;padding:10px 12px;border-radius:8px}
+.drop-panel a:hover{background:var(--warm)}
+.drop-panel b{display:block;color:#2d2924;font-size:13px}
+.drop-panel small{display:block;color:#7c746a;font-size:11px;margin-top:2px}
+.nav-drop:hover .drop-panel{display:block}
+.header-actions{display:flex;gap:8px}
+.mobile-toggle{display:none;border:0;background:none;font-size:28px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:900;font-size:12px;letter-spacing:.4px;padding:13px 18px;border-radius:6px;border:1px solid transparent;transition:.22s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold-dark));color:#fff;box-shadow:0 10px 24px rgba(140,94,8,.2)}
+.btn.dark-outline{border-color:#28231e;background:#fff;color:#28231e}
+.btn.glass{border-color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);color:#fff;backdrop-filter:blur(8px)}
+.btn.large{padding:14px 22px}
+.btn.full{width:100%;margin-top:10px}
+
+/* NEW clinical hero */
+.clinical-hero{position:relative;min-height:720px;display:flex;align-items:center;overflow:hidden;background:#111}
+.clinical-video-bg{position:absolute;inset:0}
+.clinical-video-bg video{width:100%;height:100%;object-fit:cover}
+.clinical-video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.91) 0%,rgba(16,13,8,.76) 42%,rgba(16,13,8,.28) 73%,rgba(16,13,8,.12) 100%)}
+.clinical-hero-content{position:relative;z-index:2;color:#fff;padding:75px 0}
+.hero-kicker{font-size:12px;letter-spacing:2.2px;font-weight:900;color:#f0cf86}
+.clinical-hero h1{font:700 clamp(52px,6vw,88px)/.98 Georgia,serif;max-width:920px;margin:14px 0 22px}
+.hero-lead{font-size:20px;max-width:780px;line-height:1.55;color:#fff}
+.hero-secondary{font-size:15px;max-width:780px;color:#ded9d2}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.clinical-stat-row{display:grid;grid-template-columns:repeat(3,1fr);max-width:900px;margin-top:35px;border-top:1px solid rgba(255,255,255,.28);border-bottom:1px solid rgba(255,255,255,.28)}
+.clinical-stat-row div{padding:17px 18px;border-right:1px solid rgba(255,255,255,.22)}
+.clinical-stat-row div:last-child{border-right:0}
+.clinical-stat-row b,.clinical-stat-row span{display:block}
+.clinical-stat-row b{font:700 18px Georgia,serif;color:#f1cf82}
+.clinical-stat-row span{font-size:12px;color:#eeeae3;margin-top:3px}
+
+/* sections */
+.section-pad{padding:82px 0}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:2.2px;font-weight:900;color:var(--gold-dark);text-transform:uppercase}
+.section-title h2,.care-team-split h2,.referral-copy h2,.leadership-modern h2,.location-modern h2,.inner-hero h1,.service-detail-hero h1,.prose h2,.contact-details h2{
+  font-family:Georgia,serif;color:var(--black)
+}
+.split-title{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:35px}
+.split-title h2{font-size:48px;line-height:1.02;margin:8px 0 0}
+.split-title p{font-size:16px;color:var(--muted);margin:0}
+.centered{text-align:center;max-width:900px;margin:0 auto 38px}
+.centered h2{font:700 46px/1.02 Georgia,serif;margin:8px 0 12px}
+.centered p{color:var(--muted)}
+.inverse h2,.inverse p{color:#fff}
+.inverse .eyebrow{color:#edc86f}
+
+/* care pathways */
+.care-pathways{background:#fff}
+.pathway-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pathway-card{background:var(--warm);border:1px solid var(--line);padding:30px;border-radius:14px;position:relative;overflow:hidden}
+.pathway-card:after{content:"";position:absolute;right:-20px;bottom:-28px;width:120px;height:120px;border-radius:50%;border:1px solid #dfcc9e}
+.pathway-number{font-size:11px;font-weight:900;color:var(--gold-dark);letter-spacing:1.4px}
+.pathway-card h3{font:700 29px Georgia,serif;color:var(--black);margin:15px 0 10px}
+.pathway-card p{color:#6e675f}
+.pathway-card a{display:inline-block;margin-top:12px;color:var(--gold-dark);font-weight:900;text-decoration:none}
+
+/* black services */
+.services-black{background:var(--black);color:#fff}
+.medical-service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.medical-service-grid>a{display:block;text-decoration:none;background:#22201d;border:1px solid #3a352f;border-radius:12px;padding:24px;min-height:205px;transition:.25s ease}
+.medical-service-grid>a:hover{transform:translateY(-5px);border-color:#d3aa50;background:#29251f}
+.medical-service-grid span{display:inline-flex;min-width:42px;height:30px;align-items:center;justify-content:center;padding:0 9px;border-radius:15px;background:linear-gradient(135deg,#e1b44b,#95660b);font-size:10px;font-weight:900}
+.medical-service-grid h3{font:700 24px Georgia,serif;margin:17px 0 9px}
+.medical-service-grid p{font-size:13px;color:#d7d0c7}
+.all-services-card{background:linear-gradient(145deg,#42330f,#1e1b17)!important;border-color:#8c6a22!important}
+
+/* care team */
+.care-team-home{background:#f7f3eb}
+.care-team-split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.care-team-split h2{font-size:50px;line-height:1.02;margin:8px 0 17px}
+.care-team-split p{color:#655e56}
+.role-list{display:grid;gap:12px}
+.role-list>div{background:#fff;border:1px solid var(--line);border-left:5px solid #c99a36;border-radius:8px;padding:18px 20px}
+.role-list b,.role-list span{display:block}
+.role-list b{font:700 19px Georgia,serif}
+.role-list span{color:#736b62;font-size:13px;margin-top:4px}
+
+/* referrals */
+.referral-section{background:#fff}
+.referral-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:50px;align-items:start}
+.referral-copy h2{font-size:50px;line-height:1.02;margin:8px 0 18px}
+.referral-copy>p{color:#6a6259;max-width:820px}
+.referral-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:30px}
+.referral-steps>div{border-top:3px solid #c99a36;background:#faf8f4;padding:22px}
+.referral-steps span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1f1c18;color:#fff;font-weight:900;margin-bottom:16px}
+.referral-steps b{font-family:Georgia,serif;font-size:18px}
+.referral-steps p{font-size:13px;color:#71685f}
+.referral-cta{background:var(--black);color:#fff;border-radius:14px;padding:30px;box-shadow:var(--shadow)}
+.referral-cta h3{font:700 30px Georgia,serif;margin-top:0}
+.referral-cta p{color:#d9d3cb}
+
+/* leadership */
+.leadership-modern{background:#fbf8f1;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.leadership-modern-grid{display:grid;grid-template-columns:170px 1fr 360px;gap:30px;align-items:center}
+.leadership-mark img{width:150px;border-radius:50%}
+.leadership-modern h2{font-size:43px;line-height:1.04;margin:7px 0 12px}
+.leadership-modern p{color:#685f56}
+.text-link{display:inline-block;margin-top:10px;color:var(--gold-dark);font-weight:900;text-decoration:none}
+.leadership-modern blockquote{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:25px;font:italic 19px/1.48 Georgia,serif;color:#49351c}
+.leadership-modern blockquote strong{display:block;margin-top:18px;font:700 13px Arial;color:#2b2722}
+
+/* location */
+.location-modern{background:#fff}
+.location-modern-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.location-modern h2{font-size:48px;line-height:1.02;margin:8px 0 14px}
+.location-modern p{color:#685f57}
+.map-card{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.map-card iframe{display:block;width:100%;height:390px;border:0}
+
+/* Inner pages compatibility */
+.inner-hero{background:linear-gradient(135deg,#f4f0e8,#fff 68%);padding:72px 0;border-bottom:1px solid var(--line)}
+.inner-hero h1{font-size:clamp(44px,5vw,70px);line-height:1.02;margin:9px 0 14px;max-width:1050px}
+.inner-hero p{max-width:860px;font-size:17px;color:#6c645c}
+.content-two-col,.leadership-detail{display:grid;grid-template-columns:1.55fr .65fr;gap:38px;align-items:start}
+.prose h2{font-size:34px;margin:30px 0 10px}
+.prose h3{font-family:Georgia,serif;color:var(--gold-dark);font-size:23px}
+.prose p{font-size:16px;color:#5f5851}
+.side-info{position:sticky;top:125px;background:#f8f5ef;border:1px solid var(--line);border-radius:12px;padding:25px}
+.side-info h3{font:700 23px Georgia,serif}
+.side-info ul{padding-left:20px}
+.side-info li{margin:8px 0}
+.side-info a{text-decoration:none;color:var(--gold-dark)}
+.side-logo{width:140px;border-radius:50%;display:block;margin:0 auto 15px}
+.detail-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.detail-list li{list-style:none;background:#f8f5ef;border:1px solid var(--line);border-radius:8px;padding:12px}
+.value-cards,.resource-grid,.career-grid,.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.value-cards article,.resource-grid article,.career-grid article,.team-grid article{background:#fff;border:1px solid var(--line);border-radius:11px;padding:24px;box-shadow:0 8px 24px rgba(28,22,15,.05)}
+.value-cards h2,.resource-grid h2,.career-grid h2,.team-grid h2{font:700 26px Georgia,serif}
+.service-large-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.service-large-card{display:grid;grid-template-columns:200px 1fr;gap:19px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;text-decoration:none;box-shadow:0 8px 24px rgba(28,22,15,.05);transition:.2s ease}
+.service-large-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.service-large-card img{width:100%;height:100%;min-height:270px;object-fit:cover}
+.service-large-card>div{padding:23px 23px 23px 0}
+.service-large-card h2{font:700 30px Georgia,serif;margin:6px 0 10px}
+.service-large-card p{font-size:14px;color:#6a625a}
+.learn-more{font-size:11px;font-weight:900;color:var(--gold-dark)}
+.service-detail-hero{background:#f5f1e9;padding:58px 0;border-bottom:1px solid var(--line)}
+.service-detail-hero-grid{display:grid;grid-template-columns:1fr 470px;gap:40px;align-items:center}
+.service-detail-hero h1{font-size:60px;margin:8px 0 10px}
+.service-detail-hero img{width:100%;height:310px;object-fit:cover;border-radius:12px}
+.service-warning{background:#fff1ca;border-left:4px solid #c69022;padding:12px 14px;margin:15px 0;border-radius:0 8px 8px 0;font-size:13px}
+.location-detail-card{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;background:#f7f3eb;border:1px solid var(--line);border-radius:12px;padding:28px}
+.location-detail-card h2{font:700 37px Georgia,serif}
+.location-detail-card iframe{width:100%;height:430px;border:0;border-radius:10px}
+.address-lines{display:grid;gap:6px;margin:18px 0}
+.faq-list{max-width:950px}
+.faq-list details{border:1px solid var(--line);border-radius:9px;padding:17px 20px;margin-bottom:12px}
+.faq-list summary{font:700 18px Georgia,serif;cursor:pointer}
+.form-card{max-width:1000px;background:#faf8f4;border:1px solid var(--line);border-radius:12px;padding:30px;box-shadow:var(--shadow)}
+.form-card form{display:grid;gap:16px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{font-weight:800}
+input,textarea{display:block;width:100%;margin-top:7px;padding:13px;border:1px solid #d3cabb;border-radius:7px;background:#fff;font:inherit}
+input:focus,textarea:focus{outline:none;border-color:#c69022;box-shadow:0 0 0 4px rgba(198,144,34,.12)}
+.contact-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px}
+.contact-details{background:#f7f3eb;border:1px solid var(--line);border-radius:12px;padding:28px}
+.contact-line{padding:13px 0;border-top:1px solid var(--line);display:grid;gap:4px}
+
+/* footer */
+.site-footer{background:#181613;color:#fff}
+.footer-main{display:grid;grid-template-columns:1.4fr .8fr .8fr 1.1fr;gap:32px;padding:45px 0}
+.footer-brand img{width:72px;border-radius:50%}
+.footer-brand h3{font:700 20px Georgia,serif;margin:8px 0}
+.site-footer h4{font:700 16px Georgia,serif;color:#e3bd67;margin:0 0 10px}
+.site-footer a{display:block;color:#e8e3dc;text-decoration:none;margin:5px 0}
+.site-footer p{color:#cfc8bf}
+.footer-bottom{border-top:1px solid #3b342b;color:#bdb6ad;text-align:center;padding:10px;font-size:11px}
+
+/* responsive */
+@media(max-width:1180px){
+  .header-main{grid-template-columns:1fr auto}
+  .header-actions{display:none}
+  .mobile-toggle{display:block}
+  .main-nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;padding:18px 4%;flex-direction:column;align-items:flex-start;box-shadow:var(--shadow);max-height:78vh;overflow:auto}
+  .main-nav.open{display:flex}
+  .nav-drop{width:100%}
+  .nav-drop>button,.main-nav>a{width:100%;text-align:left}
+  .drop-panel,.drop-panel.mega{position:static;width:100%;box-shadow:none;border:0;padding-left:14px;display:none}
+  .nav-drop.open .drop-panel{display:block}
+  .nav-drop:hover .drop-panel{display:none}
+  .nav-drop.open:hover .drop-panel{display:block}
+}
+@media(max-width:980px){
+  .split-title,.care-team-split,.referral-grid,.leadership-modern-grid,.location-modern-grid,.content-two-col,.leadership-detail,.location-detail-card,.contact-layout,.service-detail-hero-grid{grid-template-columns:1fr}
+  .pathway-grid,.medical-service-grid,.referral-steps,.value-cards,.resource-grid,.career-grid,.team-grid{grid-template-columns:1fr 1fr}
+  .leadership-mark{display:none}
+  .side-info{position:static}
+  .service-large-grid{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  .topbar-inner{justify-content:flex-start;padding:7px 0;gap:8px 14px}
+  .brand img{width:55px;height:55px}
+  .brand-copy strong{font-size:16px}
+  .brand-copy .brand-second{font-size:14px}
+  .brand-copy span{display:none}
+  .clinical-hero{min-height:760px}
+  .clinical-video-overlay{background:rgba(12,10,8,.74)}
+  .clinical-hero h1{font-size:48px}
+  .clinical-stat-row,.pathway-grid,.medical-service-grid,.referral-steps,.value-cards,.resource-grid,.career-grid,.team-grid,.form-grid{grid-template-columns:1fr}
+  .clinical-stat-row div{border-right:0;border-bottom:1px solid rgba(255,255,255,.2)}
+  .service-large-card{grid-template-columns:1fr}
+  .service-large-card img{height:200px;min-height:0}
+  .service-large-card>div{padding:20px}
+  .detail-list{grid-template-columns:1fr}
+  .footer-main{grid-template-columns:1fr}
+}
